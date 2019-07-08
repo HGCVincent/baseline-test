@@ -3,10 +3,10 @@
 function collectSameElements(collectionA, objectB) {
   var result =new Array() ;
   for(var i = 0; i<collectionA.length; i++){
-    for (var j= 0; j<objectB.value.length;j++){
-      if (collectionA[j] = objectB.value[j]){
-        if (!(result[result.length-1] == collectionA[i]))
-          result.push(collectionA[i]);
+    for (var j= 0; j<objectB['value'].length;j++) {
+      if (collectionA[i] == objectB['value'][j]) {
+        if (result.indexOf(objectB['value'][j]) == -1)
+          result.push(objectB['value'][j]);
       }
     }
   }
